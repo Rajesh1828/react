@@ -22,25 +22,8 @@ const AcPage = () => {
 return (
 <>
 <Navbar />
+<img src="/banner.jpeg" alt="Banner" />
 <div className="fullpage">
-    
-<div className="pro-selected">
-
-{filteredProduct.map((phone)=>{
-    return(
-        <div className='pro-input'>
-            <label >
-                <input type="checkbox" 
-                checked = {selectedProduct.includes(phone.company)}
-                onChange={()=>companyHandler(phone.company)}
-                />
-                {phone.company}
-            </label>
-        </div>
-    )
-})}
-
-</div>
 
 <div className='pageSection'>
     {filteredProduct.map((item)=>{

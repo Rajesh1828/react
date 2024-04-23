@@ -32,7 +32,8 @@ const FurnitureSingle = () => {
           <div className="ind-desc space">
             <p>{product.description}</p>
           </div>
-          <button onClick={()=>addToCart(product)}>Add to Cart</button>
+          <button onClick={()=>addToCart(product)}><Cart/>Add to Cart</button><br />
+          <button><LightningFill/>Buynow</button>
         </div>
       </div>
     </>

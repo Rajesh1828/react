@@ -1,35 +1,41 @@
 import React from "react";
+import { Bootstrap, Cart, Heart, Pen, Person } from 'react-bootstrap-icons';
+
 import { Link } from "react-router-dom";
 
 import { useCart } from "../context/CartContext";
+import { Profiler } from "react";
 
 const Navbar = () => {
 
-  const {cartItems }= useCart()
+  const { cartItems } = useCart()
 
   return (
     <div className="navbar-section">
 
       <div className="navSection">
-      <Link to='/' className="custom-link">
-  <div className="title">
-    <h2>E-Mart</h2>
-  </div>
-</Link>
+        <Link to='/' className="custom-link">
+          <div className="title">
+            <img src="/logo.png" alt="Arzooo" />
+          </div>
+        </Link>
 
         <div className="search">
           <input type="text" placeholder="Search..." />
         </div>
-        <div className="user">
-          <div className="user-detail">SignIN/SignUp</div>
-        </div>
-          <Link to= '/cart'>
-          <div className="cart">Cart
-          <span>
-            {cartItems.length}
-          </span>
+        <Link to=''>
+          <div className="user">
+            <div className="heart"><Person /></div>
           </div>
-          </Link>
+        </Link>
+        <Link to='/cart'>
+          <div className="cart">
+            <Cart />
+            <span>
+              {cartItems.length}
+            </span>
+          </div>
+        </Link>
       </div>
       <div className="subMenu">
         <ul>
@@ -45,14 +51,6 @@ const Navbar = () => {
             <li>Watches</li>
           </Link>
 
-          <Link to="/men" className="custom-link">
-            <li>Mens Wear</li>
-          </Link>
-
-          <Link to="/woman" className="custom-link">
-            <li>Woman Wear</li>
-          </Link>
-
           <Link to="/furniture" className="custom-link">
             <li>Furniture</li>
           </Link>
@@ -63,9 +61,6 @@ const Navbar = () => {
 
           <Link to="/fridge" className="custom-link">
             <li>Fridge</li>
-          </Link>
-          <Link to="/" className="custom-link">
-            <li>Books</li>
           </Link>
 
           <Link to="/" className="custom-link">

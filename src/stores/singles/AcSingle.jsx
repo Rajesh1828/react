@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 import { useCart } from "../context/CartContext";
+import { Cart, Cart3, LightningFill } from "react-bootstrap-icons";
 
 const AcSingle = () => {
   const { id } = useParams();
@@ -32,7 +33,8 @@ const AcSingle = () => {
           <div className="ind-desc space">
             <p>{product.description}</p>
           </div>
-          <button onClick={()=>addToCart(product)}>Add to Cart</button>
+          <button onClick={()=>addToCart(product)}><Cart/>Add to Cart</button><br />
+          <button><LightningFill/>Buynow</button>
         </div>
       </div>
     </>
