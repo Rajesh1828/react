@@ -22,25 +22,8 @@ const KitchenPage = () => {
 return (
 <>
 <Navbar />
+<img src="/banner.jpeg" alt="Banner" />
 <div className="fullpage">
-    
-<div className="pro-selected">
-
-{kitchenData.map((phone)=>{
-    return(
-        <div className='pro-input'>
-            <label >
-                <input type="checkbox" 
-                checked = {selectedProduct.includes(phone.brand)}
-                onChange={()=>companyHandler(phone.brand)}
-                />
-                {phone.brand}
-            </label>
-        </div>
-    )
-})}
-
-</div>
 
 <div className='pageSection'>
     {filteredProduct.map((item)=>{

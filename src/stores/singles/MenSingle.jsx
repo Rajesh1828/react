@@ -32,7 +32,8 @@ const MenSingle = () => {
           <div className="ind-desc space">
             <p>{product.description}</p>
           </div>
-          <button onClick={()=>addToCart(product)}>Add to Cart</button>
+          <button onClick={()=>addToCart(product)}>Add to Cart</button><br />
+          <button>Buynow</button>
         </div>
       </div>
     </>
