@@ -24,10 +24,12 @@ import WatchSingle from './stores/singles/WatchSingle'
 import WomanSingle from './stores/singles/WomanSingle'
 import FridgeSingle from './stores/singles/FridgeSingle'
 import Watchbuy from './stores/buy/Watchbuy'
+import Login from './screens/login'
 
 const App = () => {
   return (
     <div>
+      <Login/>
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/kitchen' element={<KitchenPage />} />
